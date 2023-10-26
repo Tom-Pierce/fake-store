@@ -1,2 +1,26 @@
-.productInfo {
+.productPage {
+  display: flex;
+  padding: 2rem;
+  background-color: white;
+}
+
+.info {
+  padding: 0 1rem;
+}
+
+.title {
+  max-width: 20rem;
+}
+
+.imageWrapper {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image {
+  width: 30rem;
+}
+
+.description {
+  max-width: 30rem;
 }
