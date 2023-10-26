@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+}
+
+.link::after {
+  background: black;
+  display: block;
+  height: 1.5px;
+  width: 0%;
+  content: "";
+  margin-top: 0.5rem;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center the underline */
+}
+
+.activeLink {
+  transform: scale(1.2);
+}
+
+.activeLink::after {
+  width: 110%;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.navBar {
+  display: flex;
+  gap: 2rem;
+}
