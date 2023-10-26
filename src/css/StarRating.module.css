@@ -1,0 +1,7 @@
+.starRating {
+  display: flex;
+}
+
+.star {
+  height: 20px;
+}

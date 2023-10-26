@@ -24,3 +24,7 @@
 .description {
   max-width: 30rem;
 }
+
+.rating {
+  font-weight: 500;
+}

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { CartContext, ProductContext } from "../App";
 import { useContext, useEffect, useState } from "react";
 import styles from "../css/ProductPage.module.css";
+import StarRating from "./StarRating";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
@@ -45,8 +46,9 @@ const ProductPage = () => {
             <div className={styles.info}>
               <h2 className={styles.title}>{currentProduct.title}</h2>
               <span className={styles.rating}>
-                {currentProduct.rating.rate}⭐ out of{" "}
-                {currentProduct.rating.count} ratings
+                <StarRating rating={currentProduct.rating.rate} />
+                {currentProduct.rating.rate} stars out of{" "}
+                {currentProduct.rating.count} reviews
               </span>
               <p className={styles.description}>{currentProduct.description}</p>
               <div className={styles.buttons}>
@@ -59,7 +61,6 @@ const ProductPage = () => {
                 >
                   Add to Cart
                 </button>
-                <button type="button">Buy now</button>
               </div>
             </div>
           </>

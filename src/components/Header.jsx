@@ -22,7 +22,10 @@ const Header = () => {
           <div className={styles.wrapper}>
             <Link
               className={`${styles.link} ${
-                location.pathname === "/store" ? styles.activeLink : ""
+                location.pathname === "/store" ||
+                /^\/product\/\d+$/.test(location.pathname)
+                  ? styles.activeLink
+                  : ""
               }`}
               to={"/store"}
             >
