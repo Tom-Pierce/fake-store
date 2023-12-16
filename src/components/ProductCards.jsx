@@ -3,6 +3,7 @@ import styles from "../css/ProductCards.module.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../App";
+import StarRating from "./StarRating";
 
 const ProductCards = ({ products }) => {
   const { cart, setCart } = useContext(CartContext);
@@ -18,7 +19,8 @@ const ProductCards = ({ products }) => {
                 alt={"product image"}
               ></img>
               <p className={styles.title}>{product.title}</p>
-              <div className={styles.imageContainer}></div>
+
+              <StarRating rating={product.rating.rate} />
               <p className={styles.price}>€{product.price}</p>
             </Link>
             <button

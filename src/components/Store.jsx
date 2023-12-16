@@ -15,7 +15,7 @@ const Store = () => {
     }
   });
 
-  return <>{products ? <ProductCards products={products} /> : "Loading..."}</>;
+  return <>{products ? <ProductCards products={products} /> : ""}</>;
 };
 
 export default Store;

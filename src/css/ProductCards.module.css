@@ -1,6 +1,13 @@
+.productPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cardList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, max(200px, 10%));
+  justify-content: center;
   gap: 2rem;
   padding: 0 2rem;
 }
@@ -22,10 +29,10 @@
 }
 
 .productImage {
-  display: inline;
   padding: 0.5rem;
   background-color: white;
-  width: fit-content;
+  width: 100%;
+  height: auto;
 }
 
 .title {
@@ -36,7 +43,7 @@
 
 .productLink {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .addToCartButton {
